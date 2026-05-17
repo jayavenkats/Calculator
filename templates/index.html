@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Calculator</h1>
+            
+            <div class="display-area">
+                <input type="number" id="num1" class="input-field" placeholder="Enter first number" />
+            </div>
+            
+            <div class="operation-buttons">
+                <button class="op-btn" data-op="+">+</button>
+                <button class="op-btn" data-op="-">−</button>
+                <button class="op-btn" data-op="*">×</button>
+                <button class="op-btn" data-op="/">÷</button>
+            </div>
+            
+            <div class="display-area">
+                <input type="number" id="num2" class="input-field" placeholder="Enter second number" />
+            </div>
+            
+            <div class="button-group">
+                <button id="calculateBtn" class="calc-btn">Calculate</button>
+                <button id="clearBtn" class="clear-btn">Clear</button>
+            </div>
+            
+            <div class="result-area" id="resultArea">
+                <p id="resultText">Result will appear here</p>
+            </div>
+            
+            <div id="errorArea" class="error-area"></div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
+</body>
+</html>
